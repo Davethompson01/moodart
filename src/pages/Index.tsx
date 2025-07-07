@@ -85,7 +85,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-xl font-semibold text-white">Wallet Required</h3>
                     <p className="text-purple-200 max-w-sm">
-                      Connect your wallet above to start creating AI-generated mood art on Monad
+                      Connect your wallet above.
                     </p>
                   </div>
                 </div>
