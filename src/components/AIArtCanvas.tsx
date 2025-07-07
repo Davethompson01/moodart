@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { MintNFT } from './MintNFT';
 import { RunwareService } from '../services/RunwareService';
@@ -36,7 +35,7 @@ export const AIArtCanvas = ({
   const [metadata, setMetadata] = useState({});
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [loadingStage, setLoadingStage] = useState('');
-  const apiKey = 'xEMCNap53QjgtC2vz2C2Kw92QN97XF9W';
+  const apiKey = 'ZLx8nBtjkZgGkURm2L9SlVeCuSok2sKn';
 
   useEffect(() => {
     if (isGenerating && mood) {
@@ -54,7 +53,7 @@ export const AIArtCanvas = ({
       setLoadingProgress(20);
       setLoadingStage('Processing your mood...');
       
-      const prompt = `${mood}, digital art, artistic, high quality, detailed, vibrant colors, professional artwork`;
+      const prompt = `${mood}, high quality`;
       
       setLoadingProgress(40);
       setLoadingStage('Connecting to AI service...');
