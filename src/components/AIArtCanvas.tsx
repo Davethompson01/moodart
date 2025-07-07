@@ -149,7 +149,7 @@ export const AIArtCanvas = ({
                 }}
               />
               <div className="absolute top-4 right-4 bg-green-500/90 text-white px-3 py-1 rounded-full text-sm font-medium animate-fade-in">
-                ✨ Generated
+                Your nft
               </div>
             </div>
           ) : (

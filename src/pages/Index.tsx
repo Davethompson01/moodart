@@ -123,14 +123,14 @@ const Index = () => {
               
               {hasGenerated && (
                 <div className="text-center space-y-4">
-                  <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4 border border-green-500/30">
+                  {/* <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4 border border-green-500/30">
                     <p className="text-green-200 font-medium">
                       🎨 Your unique AI artwork has been generated on Monad!
                     </p>
                     <p className="text-sm text-green-300 mt-1">
                       Your wallet is connected - you can now mint as NFT, or create new variations
-                    </p>
-                  </div>
+                    </p> */}
+                  {/* </div> */}
                   
                   <div className="flex justify-center gap-4">
                     <Button 

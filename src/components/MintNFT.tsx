@@ -208,52 +208,52 @@ export const MintNFT = ({ imageUrl, metadata, mood, onMintSuccess }: MintNFTProp
     <Card className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-purple-500/30">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
-          <Zap className="w-5 h-5" />
+          {/* <Zap className="w-5 h-5" /> */}
           Mint Your NFT on Monad
         </CardTitle>
-        <CardDescription className="text-purple-200">
+        <CardDescription className="text-white">
           Transform your mood art into a unique NFT on Monad testnet
         </CardDescription>
       </CardHeader>
       
       <CardContent className="space-y-4">
         {/* Network status indicator */}
-        <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-2 text-center">
-          <p className="text-blue-200 text-xs">
+        {/* <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-2 text-center">
+          <p className="text-white text-xs">
             🌐 Connected to Monad Testnet (Chain ID: {chainId})
           </p>
-        </div>
+        </div> */}
 
         {/* Compression info */}
-        <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
+        {/* <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
           <div className="flex items-center gap-2 mb-2">
-            <Minimize2 className="w-4 h-4 text-green-400" />
-            <span className="text-green-200 text-sm font-medium">Gas Optimization Enabled</span>
+            <Minimize2 className="w-4 h-4 text-green-200" />
+            <span className="text-white text-sm font-medium">Gas Optimization Enabled</span>
           </div>
-          <p className="text-green-300 text-xs">
+          <p className="text-white text-xs">
             Images are automatically compressed to ~15KB to minimize gas costs and make minting affordable.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="bg-black/20 rounded-lg p-3">
-            <p className="text-purple-300">Gas Fee (Est.)</p>
+            <p className="text-white">Gas Fee (Est.)</p>
             <p className="text-white font-medium">{estimatedGasPrice} MON</p>
           </div>
           <div className="bg-black/20 rounded-lg p-3">
-            <p className="text-purple-300">Platform Fee</p>
+            <p className="text-white">Platform Fee</p>
             <p className="text-white font-medium">{mintingFee} MON</p>
           </div>
         </div>
         
         <div className="bg-black/30 rounded-lg p-3 border border-purple-500/30">
           <div className="flex justify-between items-center">
-            <span className="text-purple-300">Total Cost:</span>
+            <span className="text-white">Total Cost:</span>
             <span className="text-white font-bold">{formatEther(totalCost)} MON</span>
           </div>
           <div className="flex justify-between items-center mt-1">
-            <span className="text-purple-300 text-sm">Your Balance:</span>
-            <span className={`text-sm ${hasInsufficientBalance ? 'text-red-400' : 'text-green-400'}`}>
+            <span className="text-white text-sm">Your Balance:</span>
+            <span className={`text-sm ${hasInsufficientBalance ? 'text-red-400' : 'text-green-300'}`}>
               {balance ? formatEther(balance.value) : '0'} MON
             </span>
           </div>
@@ -295,7 +295,7 @@ export const MintNFT = ({ imageUrl, metadata, mood, onMintSuccess }: MintNFTProp
 
         {hasInsufficientBalance && !mintError && (
           <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-3">
-            <p className="text-red-200 text-sm">
+            <p className="text-white text-sm">
               ⚠️ Insufficient balance. You need at least {formatEther(totalCost)} MON to mint this NFT.
             </p>
           </div>
@@ -304,7 +304,7 @@ export const MintNFT = ({ imageUrl, metadata, mood, onMintSuccess }: MintNFTProp
         <Button
           onClick={handleMint}
           disabled={isMinting || hasInsufficientBalance}
-          className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:opacity-50"
+          className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 text-white"
         >
           {isMinting ? (
             <>
@@ -318,7 +318,7 @@ export const MintNFT = ({ imageUrl, metadata, mood, onMintSuccess }: MintNFTProp
           )}
         </Button>
         
-        <p className="text-xs text-purple-300 text-center">
+        <p className="text-xs text-white text-center">
           * Images compressed for optimal gas efficiency • Gas fees may vary
           {retryCount > 0 && ` • Retries: ${retryCount}`}
         </p>
